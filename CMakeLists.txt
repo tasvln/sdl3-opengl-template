@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.16)
 
 set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(WINDOW VERSION 1.0.0)
 
@@ -15,7 +16,7 @@ set(SDL_image
 set(SDL_ttf
   /Library/Frameworks/SDL3_ttf.framework)
 
-add_executable(WINDOW main.cpp lib/glad.c ext/texture/Texture.cpp)
+add_executable(WINDOW main.cpp)
 
 target_link_libraries(
   WINDOW PRIVATE
